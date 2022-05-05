@@ -7,78 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://kit.fontawesome.com/12b0473b9f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="node_modules/colormyar/css/pdf.css" />
     <link rel="stylesheet" href="css/cus.css" />
 </head>
 
 <body>
     <div class="d-flex">
-        <aside class="aside p-2">
-            <div class="card">
-                <div class="card-body p-1">
-                    <div class="ms-3 mb-3">
-                        <h4 class="mb-0">Digital Hunter</h4>
-                        <span class="small">Web Development</span>
-                    </div>
-                    <div class="ms-3 mb-3">
-                        <div class="d-flex justify-content-start align-items-center border p-1">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Search..." class="form-control border border-0" />
+        <aside class="aside p-2 pt-0">
+            <div class="aside-body position-sticky top-0 pt-0">
+                <div class="card">
+                    <div class="card-body p-1">
+                        <div class="ms-3 mb-3">
+                            <h4 class="mb-0">Digital Hunter</h4>
+                            <span class="small">Web Development</span>
                         </div>
-                    </div>
-                    <div>
-                        <div class="list-group list-group-flush">
-                            <li class="list-group-item disabled" aria-disabled="true">
-                                Menu
-                            </li>
-                            <a href="#" class="list-group-item active list-group-item-action">
-                                <i class="fa-solid fa-house-user me-2 fa-fw"></i>
-                                <span> Dashboard</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fa-solid fa-badge-dollar me-2 fa-fw"></i>
-                                <span> Income</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fa-solid fa-paper-plane me-2 fa-fw"></i>
-                                <span> Post</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fa-solid fa-user me-2 fa-fw"></i>
-                                <span> Customer Care</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fa-solid fa-chart-line-up me-2 fa-fw"></i>
-                                <span> Sale Analysis</span>
-                            </a>
+                        <div class="ms-3 mb-3" data-bs-toggle=" modal">
+                            <div class="d-flex justify-content-start align-items-center border rounded p-1 px-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search..." class="form-control border border-0 bg-white" disabled />
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="list-group list-group-flush mb-3">
-                            <li class="list-group-item disabled" aria-disabled="true">
-                                Setting
-                            </li>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fa-solid fa-user-lock me-2 fa-fw"></i>
-                                <span> Password</span>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fa-solid fa-badge-dollar me-2 fa-fw"></i>
-                                <span> Theme</span>
-                            </a>
+                        <div>
+                            <div class="list-group list-group-flush">
+                                <li class="list-group-item disabled" aria-disabled="true">
+                                    Menu
+                                </li>
+                                <a href="#" class="list-group-item active list-group-item-action">
+                                    <i class="fa-solid fa-house-user me-2 fa-fw"></i>
+                                    <span> Dashboard</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-badge-dollar me-2 fa-fw"></i>
+                                    <span> Income</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-paper-plane me-2 fa-fw"></i>
+                                    <span> Post</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-user me-2 fa-fw"></i>
+                                    <span> Customer Care</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-chart-line-up me-2 fa-fw"></i>
+                                    <span> Sale Analysis</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="list-group list-group-flush mb-3">
+                                <li class="list-group-item disabled" aria-disabled="true">
+                                    Setting
+                                </li>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-user-lock me-2 fa-fw"></i>
+                                    <span> Password</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-badge-dollar me-2 fa-fw"></i>
+                                    <span> Theme</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </aside>
         <div class="__backdrop fade"></div>
-        <main class="main pt-2">
-            <div class="container-fluid mt-2">
-                <nav class="row px-2 mb-4">
+        <main class="main">
+            <div class="container-fluid">
+                <nav class="row mb-4 position-sticky top-0 bg-white px-2" style="z-index: 3">
                     <div class="col">
-                        <div class="row justify-content-between align-items-center p-2 border">
+                        <div class="row d-flex justify-content-between align-items-center border rounded mt-2 p-2">
                             <div class="col d-block d-lg-none">
-                                <div class="aside-btn">
+                                <div class="aside-btn me-2">
                                     <i class="fa-solid fa-bars"></i>
                                 </div>
                             </div>
@@ -105,7 +109,7 @@
                             </div>
                             <div class="col">
                                 <div class="text-end">
-                                    <i class="fa-solid fa-gears me-2"></i>
+                                    <i class="fa-solid fa-gears me-2" data-bs-toggle="modal" data-bs-target="#userModal"></i>
 
                                     <a href="#" class="btn position-relative">
                                         <i class="fa-solid fa-bell"></i>
@@ -119,67 +123,645 @@
                         </div>
                     </div>
                 </nav>
-                <div class="row">
+                <div class="row mb-4 g-3">
                     <div class="col-lg-6">
                         <div class="row g-3">
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <div class="card-icon alert-danger d-flex justify-content-center align-items-center rounded-circle mb-3">
+                                            <div class="card-icon rounded d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-blue-100 pdf-text-blue-500">
                                                 <i class="fas fa-user"></i>
                                             </div>
                                             <span class="text-success">+42 % <i class="fas fa-arrow-alt-circle-up"></i
                         ></span>
                                         </div>
                                         <h4 class="mb-0 fw-bold">10,0000</h4>
-                                        <span> <small> Visitor</small></span>
+                                        <span class="small text-muted">Visitor</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <div class="card-icon alert-danger d-flex justify-content-center align-items-center rounded-circle mb-3">
+                                            <div class="card-icon rounded d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-emerald-100 pdf-text-emerald-500">
                                                 <i class="fas fa-user"></i>
                                             </div>
                                             <span class="text-success">+42 % <i class="fas fa-arrow-alt-circle-up"></i
                         ></span>
                                         </div>
                                         <h4 class="mb-0 fw-bold">10,0000</h4>
-                                        <span> <small> Visitor</small></span>
+                                        <span class="small text-muted"> Visitor</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <div class="card-icon alert-danger d-flex justify-content-center align-items-center rounded-circle mb-3">
+                                            <div class="card-icon rounded d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-red-100 pdf-text-red-500">
                                                 <i class="fas fa-user"></i>
                                             </div>
                                             <span class="text-success">+42 % <i class="fas fa-arrow-alt-circle-up"></i
                         ></span>
                                         </div>
                                         <h4 class="mb-0 fw-bold">10,0000</h4>
-                                        <span> <small> Visitor</small></span>
+                                        <span class="small text-muted"> Visitor</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <div class="card-icon alert-danger d-flex justify-content-center align-items-center rounded-circle mb-3">
+                                            <div class="card-icon rounded d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-lime-100 pdf-text-lime-500">
                                                 <i class="fas fa-user"></i>
                                             </div>
                                             <span class="text-success">+42 % <i class="fas fa-arrow-alt-circle-up"></i
                         ></span>
                                         </div>
                                         <h4 class="mb-0 fw-bold">10,0000</h4>
-                                        <span> <small> Visitor</small></span>
+                                        <span class="small text-muted">Visitor</span>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">Top Sales</h4>
+                                <span class="small text-muted">Total</span>
+                                <h3 class="fw-bold">$1500 K</h3>
+                                <div class="d-flex justify-content-start align-items-center mb-3">
+                                    <div class="card-icon alert-primary d-flex justify-content-center align-items-center p-2 rounded-3 me-3 pdf-bg-rose-200 pdf-text-rose-700 border pdf-border-rose-400">
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <h6 class="mb-0">Item</h6>
+                                            <h6 class="mb-0 fw-bold">$ 75,000k</h6>
+                                        </div>
+
+                                        <div class="progress" style="height: 0.5rem">
+                                            <div class="progress-bar pdf-bg-rose-500" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center mb-3">
+                                    <div class="card-icon alert-primary d-flex justify-content-center align-items-center p-2 rounded-3 me-3 pdf-bg-fuchsia-200 pdf-text-fuchsia-700 border pdf-border-fuchsia-400">
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <h6 class="mb-0">Item</h6>
+                                            <h6 class="mb-0 fw-bold">$ 50,000k</h6>
+                                        </div>
+
+                                        <div class="progress" style="height: 0.5rem">
+                                            <div class="progress-bar pdf-bg-fuchsia-500" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center mb-3">
+                                    <div class="card-icon alert-primary d-flex justify-content-center align-items-center p-2 rounded-3 me-3 pdf-bg-yellow-200 pdf-text-yellow-700 border pdf-border-yellow-400">
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <h6 class="mb-0">Item</h6>
+                                            <h6 class="mb-0 fw-bold">$ 20,000k</h6>
+                                        </div>
+
+                                        <div class="progress" style="height: 0.5rem">
+                                            <div class="progress-bar pdf-bg-yellow-500" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="fw-bold">Visitor</h4>
+                                    <div class="dropdown">
+                                        <a href="#" class="text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Months
+                      </a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">January</a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">February</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">March</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="line-chart">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 g-3">
+                    <div class="col-lg-8">
+                        <div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="mb-4 fw-bold">Order List</h4>
+                                    <div class="table-responsive">
+                                        <table id="tt" class="table table-hover text-nowrap" style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Garrett Winters</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>63</td>
+                                                    <td>2011/07/25</td>
+                                                    <td>$170,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ashton Cox</td>
+                                                    <td>Junior Technical Author</td>
+                                                    <td>San Francisco</td>
+                                                    <td>66</td>
+                                                    <td>2009/01/12</td>
+                                                    <td>$86,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cedric Kelly</td>
+                                                    <td>Senior Javascript Developer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>22</td>
+                                                    <td>2012/03/29</td>
+                                                    <td>$433,060</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Airi Satou</td>
+                                                    <td>Accountant</td>
+                                                    <td>Tokyo</td>
+                                                    <td>33</td>
+                                                    <td>2008/11/28</td>
+                                                    <td>$162,700</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brielle Williamson</td>
+                                                    <td>Integration Specialist</td>
+                                                    <td>New York</td>
+                                                    <td>61</td>
+                                                    <td>2012/12/02</td>
+                                                    <td>$372,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Herrod Chandler</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>San Francisco</td>
+                                                    <td>59</td>
+                                                    <td>2012/08/06</td>
+                                                    <td>$137,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rhona Davidson</td>
+                                                    <td>Integration Specialist</td>
+                                                    <td>Tokyo</td>
+                                                    <td>55</td>
+                                                    <td>2010/10/14</td>
+                                                    <td>$327,900</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colleen Hurst</td>
+                                                    <td>Javascript Developer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>39</td>
+                                                    <td>2009/09/15</td>
+                                                    <td>$205,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sonya Frost</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>23</td>
+                                                    <td>2008/12/13</td>
+                                                    <td>$103,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jena Gaines</td>
+                                                    <td>Office Manager</td>
+                                                    <td>London</td>
+                                                    <td>30</td>
+                                                    <td>2008/12/19</td>
+                                                    <td>$90,560</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quinn Flynn</td>
+                                                    <td>Support Lead</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>22</td>
+                                                    <td>2013/03/03</td>
+                                                    <td>$342,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Charde Marshall</td>
+                                                    <td>Regional Director</td>
+                                                    <td>San Francisco</td>
+                                                    <td>36</td>
+                                                    <td>2008/10/16</td>
+                                                    <td>$470,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Haley Kennedy</td>
+                                                    <td>Senior Marketing Designer</td>
+                                                    <td>London</td>
+                                                    <td>43</td>
+                                                    <td>2012/12/18</td>
+                                                    <td>$313,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tatyana Fitzpatrick</td>
+                                                    <td>Regional Director</td>
+                                                    <td>London</td>
+                                                    <td>19</td>
+                                                    <td>2010/03/17</td>
+                                                    <td>$385,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Silva</td>
+                                                    <td>Marketing Designer</td>
+                                                    <td>London</td>
+                                                    <td>66</td>
+                                                    <td>2012/11/27</td>
+                                                    <td>$198,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paul Byrd</td>
+                                                    <td>Chief Financial Officer (CFO)</td>
+                                                    <td>New York</td>
+                                                    <td>64</td>
+                                                    <td>2010/06/09</td>
+                                                    <td>$725,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gloria Little</td>
+                                                    <td>Systems Administrator</td>
+                                                    <td>New York</td>
+                                                    <td>59</td>
+                                                    <td>2009/04/10</td>
+                                                    <td>$237,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bradley Greer</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>London</td>
+                                                    <td>41</td>
+                                                    <td>2012/10/13</td>
+                                                    <td>$132,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dai Rios</td>
+                                                    <td>Personnel Lead</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>35</td>
+                                                    <td>2012/09/26</td>
+                                                    <td>$217,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jenette Caldwell</td>
+                                                    <td>Development Lead</td>
+                                                    <td>New York</td>
+                                                    <td>30</td>
+                                                    <td>2011/09/03</td>
+                                                    <td>$345,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yuri Berry</td>
+                                                    <td>Chief Marketing Officer (CMO)</td>
+                                                    <td>New York</td>
+                                                    <td>40</td>
+                                                    <td>2009/06/25</td>
+                                                    <td>$675,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Caesar Vance</td>
+                                                    <td>Pre-Sales Support</td>
+                                                    <td>New York</td>
+                                                    <td>21</td>
+                                                    <td>2011/12/12</td>
+                                                    <td>$106,450</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Doris Wilder</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>Sydney</td>
+                                                    <td>23</td>
+                                                    <td>2010/09/20</td>
+                                                    <td>$85,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Angelica Ramos</td>
+                                                    <td>Chief Executive Officer (CEO)</td>
+                                                    <td>London</td>
+                                                    <td>47</td>
+                                                    <td>2009/10/09</td>
+                                                    <td>$1,200,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gavin Joyce</td>
+                                                    <td>Developer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>42</td>
+                                                    <td>2010/12/22</td>
+                                                    <td>$92,575</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jennifer Chang</td>
+                                                    <td>Regional Director</td>
+                                                    <td>Singapore</td>
+                                                    <td>28</td>
+                                                    <td>2010/11/14</td>
+                                                    <td>$357,650</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brenden Wagner</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>28</td>
+                                                    <td>2011/06/07</td>
+                                                    <td>$206,850</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fiona Green</td>
+                                                    <td>Chief Operating Officer (COO)</td>
+                                                    <td>San Francisco</td>
+                                                    <td>48</td>
+                                                    <td>2010/03/11</td>
+                                                    <td>$850,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shou Itou</td>
+                                                    <td>Regional Marketing</td>
+                                                    <td>Tokyo</td>
+                                                    <td>20</td>
+                                                    <td>2011/08/14</td>
+                                                    <td>$163,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michelle House</td>
+                                                    <td>Integration Specialist</td>
+                                                    <td>Sydney</td>
+                                                    <td>37</td>
+                                                    <td>2011/06/02</td>
+                                                    <td>$95,400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Suki Burks</td>
+                                                    <td>Developer</td>
+                                                    <td>London</td>
+                                                    <td>53</td>
+                                                    <td>2009/10/22</td>
+                                                    <td>$114,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prescott Bartlett</td>
+                                                    <td>Technical Author</td>
+                                                    <td>London</td>
+                                                    <td>27</td>
+                                                    <td>2011/05/07</td>
+                                                    <td>$145,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gavin Cortez</td>
+                                                    <td>Team Leader</td>
+                                                    <td>San Francisco</td>
+                                                    <td>22</td>
+                                                    <td>2008/10/26</td>
+                                                    <td>$235,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Martena Mccray</td>
+                                                    <td>Post-Sales support</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>46</td>
+                                                    <td>2011/03/09</td>
+                                                    <td>$324,050</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unity Butler</td>
+                                                    <td>Marketing Designer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>47</td>
+                                                    <td>2009/12/09</td>
+                                                    <td>$85,675</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Howard Hatfield</td>
+                                                    <td>Office Manager</td>
+                                                    <td>San Francisco</td>
+                                                    <td>51</td>
+                                                    <td>2008/12/16</td>
+                                                    <td>$164,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hope Fuentes</td>
+                                                    <td>Secretary</td>
+                                                    <td>San Francisco</td>
+                                                    <td>41</td>
+                                                    <td>2010/02/12</td>
+                                                    <td>$109,850</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vivian Harrell</td>
+                                                    <td>Financial Controller</td>
+                                                    <td>San Francisco</td>
+                                                    <td>62</td>
+                                                    <td>2009/02/14</td>
+                                                    <td>$452,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Timothy Mooney</td>
+                                                    <td>Office Manager</td>
+                                                    <td>London</td>
+                                                    <td>37</td>
+                                                    <td>2008/12/11</td>
+                                                    <td>$136,200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jackson Bradshaw</td>
+                                                    <td>Director</td>
+                                                    <td>New York</td>
+                                                    <td>65</td>
+                                                    <td>2008/09/26</td>
+                                                    <td>$645,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Olivia Liang</td>
+                                                    <td>Support Engineer</td>
+                                                    <td>Singapore</td>
+                                                    <td>64</td>
+                                                    <td>2011/02/03</td>
+                                                    <td>$234,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bruno Nash</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>London</td>
+                                                    <td>38</td>
+                                                    <td>2011/05/03</td>
+                                                    <td>$163,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sakura Yamamoto</td>
+                                                    <td>Support Engineer</td>
+                                                    <td>Tokyo</td>
+                                                    <td>37</td>
+                                                    <td>2009/08/19</td>
+                                                    <td>$139,575</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Thor Walton</td>
+                                                    <td>Developer</td>
+                                                    <td>New York</td>
+                                                    <td>61</td>
+                                                    <td>2013/08/11</td>
+                                                    <td>$98,540</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Finn Camacho</td>
+                                                    <td>Support Engineer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>47</td>
+                                                    <td>2009/07/07</td>
+                                                    <td>$87,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Serge Baldwin</td>
+                                                    <td>Data Coordinator</td>
+                                                    <td>Singapore</td>
+                                                    <td>64</td>
+                                                    <td>2012/04/09</td>
+                                                    <td>$138,575</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Zenaida Frank</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>New York</td>
+                                                    <td>63</td>
+                                                    <td>2010/01/04</td>
+                                                    <td>$125,250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Zorita Serrano</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>56</td>
+                                                    <td>2012/06/01</td>
+                                                    <td>$115,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jennifer Acosta</td>
+                                                    <td>Junior Javascript Developer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>43</td>
+                                                    <td>2013/02/01</td>
+                                                    <td>$75,650</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cara Stevens</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>New York</td>
+                                                    <td>46</td>
+                                                    <td>2011/12/06</td>
+                                                    <td>$145,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hermione Butler</td>
+                                                    <td>Regional Director</td>
+                                                    <td>London</td>
+                                                    <td>47</td>
+                                                    <td>2011/03/21</td>
+                                                    <td>$356,250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lael Greer</td>
+                                                    <td>Systems Administrator</td>
+                                                    <td>London</td>
+                                                    <td>21</td>
+                                                    <td>2009/02/27</td>
+                                                    <td>$103,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jonas Alexander</td>
+                                                    <td>Developer</td>
+                                                    <td>San Francisco</td>
+                                                    <td>30</td>
+                                                    <td>2010/07/14</td>
+                                                    <td>$86,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shad Decker</td>
+                                                    <td>Regional Director</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>51</td>
+                                                    <td>2008/11/13</td>
+                                                    <td>$183,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Bruce</td>
+                                                    <td>Javascript Developer</td>
+                                                    <td>Singapore</td>
+                                                    <td>29</td>
+                                                    <td>2011/06/27</td>
+                                                    <td>$183,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Donna Snider</td>
+                                                    <td>Customer Support</td>
+                                                    <td>New York</td>
+                                                    <td>27</td>
+                                                    <td>2011/01/25</td>
+                                                    <td>$112,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-2">Top Sales</h4>
+                                <span class="small text-muted">Total</span>
+                                <h3 class="fw-bold">$1500 K</h3>
+                                <div class="visitor-chart">
+                                    <canvas id="myVisitor"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -188,6 +770,72 @@
             </div>
         </main>
     </div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ms-3 mb-3" data-bs-toggle=" modal">
+                        <div class="d-flex justify-content-start align-items-center border rounded p-1 px-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search..." class="form-control border border-0 bg-white" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="userModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">
+                        <i class="fas fa-user"></i> User Info
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="">
+                            <img src="img/profile.webp" class="w-100 h-100" alt="" />
+                        </div>
+                        <div class="mt-n5 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-25 border border-5 rounded-circle border-white bg-white" viewBox="0 0 422 422">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #000;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Logo">
+                      <path
+                        class="cls-1"
+                        d="M125.08,270a23.27,23.27,0,1,1-23.27,23.27A23.3,23.3,0,0,1,125.08,270Zm85.45-81.84a23.27,23.27,0,1,0,23.26,23.26A23.28,23.28,0,0,0,210.53,188.12Zm84.39-80.62a23.27,23.27,0,1,0,23.27,23.27A23.3,23.3,0,0,0,294.92,107.5ZM148.35,130.77a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Zm178.6,162.61A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23Zm0,0A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23ZM148.35,130.77a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Zm8.76.15a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Zm178.6,162.61A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23Zm0,0A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23ZM148.35,130.77a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62ZM422,211c0,116.53-94.47,211-211,211S0,327.53,0,211,94.47,0,211,0,422,94.47,422,211ZM86.81,130.77A38.27,38.27,0,1,0,125.08,92.5,38.32,38.32,0,0,0,86.81,130.77ZM333.19,293.23a38.27,38.27,0,1,0-38.27,38.27A38.32,38.32,0,0,0,333.19,293.23Zm0-162.46a38.27,38.27,0,1,0-45.77,37.53v18.08a17.52,17.52,0,0,1-17.5,17.5H248.05a38.27,38.27,0,0,0-75.05,0H150.08a32.54,32.54,0,0,0-32.5,32.5V255.7a38.27,38.27,0,1,0,15,0V236.38a17.53,17.53,0,0,1,17.5-17.5H173a38.27,38.27,0,0,0,75.05,0h21.87a32.53,32.53,0,0,0,32.5-32.5V168.3A38.34,38.34,0,0,0,333.19,130.77Zm-15,162.46A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23ZM101.81,130.77A23.26,23.26,0,1,1,125.08,154,23.3,23.3,0,0,1,101.81,130.77Zm28.1-4.32a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39a.57.57,0,0,0,0-.83l-6.82-6.39a.57.57,0,0,0-.8,0Zm-10.5,15.13a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38l6.46-22.25a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39Zm-9.74-10.13,6.82,6.39a.56.56,0,0,0,.8,0l2.06-2.2a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39A.57.57,0,0,0,109.67,131.45Zm38.68-.68a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Zm178.6,162.61A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23Zm0,0A23.27,23.27,0,1,1,294.92,270,23.3,23.3,0,0,1,318.19,293.23ZM148.35,130.77a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Zm8.76.15a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Zm8.76.15a23.27,23.27,0,1,1-23.27-23.27A23.24,23.24,0,0,1,148.35,130.77Zm-29,4.85a.55.55,0,0,0,0-.81L115,131l4.28-3.77a.57.57,0,0,0,0-.82l-2.06-2.19a.57.57,0,0,0-.8,0l-6.82,6.39a.57.57,0,0,0,0,.83l6.82,6.39a.56.56,0,0,0,.8,0Zm10.5-15.13a.55.55,0,0,0-.39-.7l-2.88-.84a.56.56,0,0,0-.71.39l-6.46,22.24a.58.58,0,0,0,.39.71l2.89.83a.56.56,0,0,0,.7-.38Zm9.74,10.13-6.82-6.39a.57.57,0,0,0-.8,0l-2.06,2.2a.56.56,0,0,0,0,.81l4.29,3.78L130,134.81a.56.56,0,0,0,0,.81l2.06,2.2a.56.56,0,0,0,.8,0l6.82-6.39A.57.57,0,0,0,139.59,130.62Z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                        </div>
+                        <h4 class="fw-bold">Hellen</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
     <script src="js/cus.js"></script>
 </body>
 
