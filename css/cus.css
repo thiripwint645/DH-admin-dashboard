@@ -6,10 +6,6 @@
     width: 100%;
 }
 
-.icon-small {
-    font-size: 22px;
-}
-
 .list-group-item {
     border: transparent !important;
     border-left-width: 4px !important;
