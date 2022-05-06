@@ -46,8 +46,8 @@ const data = {
             borderColor: "rgb(255, 99, 132)",
             borderRadius: 6,
             data: [
-                0, 10, 5, 2, 20, 30, 45, 0, 10, 5, 2, 20, 30, 45, 0, 10, 5, 2, 20, 30,
-                45,
+                10, 15, 50, 25, 40, 35, 45, 0, 10, 5, 2, 20, 30, 45, 40, 50, 55, 72, 20,
+                37, 85,
             ],
         },
         {
@@ -114,14 +114,16 @@ const vdata = {
     labels: vlabels,
     datasets: [{
             label: "My First dataset",
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "rgb(255, 99, 132)",
+            backgroundColor: "rgb(0,0,255,0.3)",
+            borderColor: "rgb(0,0,255,0.3)",
+            borderRadius: 8,
             data: [0, 10, 5, 2, 20, 30, 45],
         },
         {
-            label: "My First dataset",
-            backgroundColor: "rgb(255, 99, 132,0.2)",
-            borderColor: "rgb(255, 99, 132,0.2)",
+            label: "My Second dataset",
+            backgroundColor: "rgb(0, 0, 255)",
+            borderColor: "rgb(0, 0, 255)",
+            borderRadius: 8,
             data: [10, 13, 5, 20, 10, 20, 43],
         },
     ],
